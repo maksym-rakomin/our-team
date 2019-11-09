@@ -1,0 +1,66 @@
+@import 'variables';
+@import 'normalize';
+@import 'mixins';
+
+
+* {
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+    font-size: 10px;
+}
+body {
+    min-height: 100%;
+    // line-height: 1.7;
+    @include text ($text-color, $text-font, 1.4rem, 500)
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.container {
+    margin: 0 auto;
+    min-width: 1140px;
+    width: 95%;
+}
+
+.header {
+    text-align: center;
+    padding: 50px;
+    text-transform: uppercase;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+
+    &::before {
+        width: 100%;
+        max-width: 450px;
+        border-bottom: 1px solid $brand-color;
+    }
+    &::after {
+        width: 30px;
+        height: 30px;
+        background-color: #ffffff;
+        background-image: url(../img/bonfire.png);
+        background-position: center;
+        background-repeat: no-repeat;        
+    }
+    
+    &__title {
+        @include text($brand-color, $title-font, 6rem, 900, 1);
+        margin: 0;
+    }
+    &__subtitle{
+        @include text ($text-color, $text-font, 1.8rem, 500, 1.1)
+    }
+}

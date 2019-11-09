@@ -1,0 +1,7 @@
+@mixin text($color: inherit, $family: inherit, $size: 1.6rem, $weight: 400, $line: 1.7) {
+    color: $color;
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line;
+}
