@@ -1,0 +1,72 @@
+.slider {
+    position: relative;
+    &__slides{
+    }
+    &__slide{
+//        height: 500px;
+    }
+    &__arrow{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 75px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+
+        @include hover-active {
+            svg {
+                transform: scale(1.4);
+            }
+        }
+        
+        &--left{
+            left: 0;
+            svg {
+                transform: rotate(180deg);
+                fill: $brand-color;
+            }
+            @include hover-active {
+                svg {
+                    transform: rotate(180deg) scale(1.4);
+                }
+            }
+        }
+        &--right{
+            right: 0;
+            
+        }
+        svg {
+            fill: $brand-color;
+            @include tr();
+        }        
+                       
+    }
+    &__dots{
+        padding: 10px;
+        margin: 0;
+        text-align: center;
+        li {
+            display: inline-block;
+        }
+    }
+    &__dot{
+        width: 14px;
+        height: 14px;
+        display: inline-block;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        background: $brand-color;
+        
+
+        &--active{
+            border-color: $brand-color;
+            background: transparent;
+        }
+        @include hover-active{
+            border-color: $brand-color;
+            background: transparent;
+        }
+    }
+
+}

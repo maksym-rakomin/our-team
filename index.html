@@ -18,16 +18,64 @@
         <main>
             <div class="slider">
                 <div class="slider__slides">
-                    <div class="slider__slide"></div>
+                    <div class="slider__slide">
+                        <aside class="profile">
+                            <div class="profile__side">
+                                <div class="profile__imgwrap">
+                                    <img class="profile__img" src="img/img.jpg" alt="a man">
+                                </div>                                
+                            </div>
+
+                            <div class="profile__side">
+                                <h2 class="profile__name">Lorem ipsum</h2>
+                                <h3 class="profile__office">Lorem ipsum</h3>
+                                <ul class="social">
+                                    <li class="social__item">
+                                        <a target="_blank" href="#" class="social__link">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a target="_blank" href="#" class="social__link">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a target="_blank" href="#" class="social__link">
+                                            <i class="fab fa-google"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a target="_blank" href="#" class="social__link">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="profile__text">
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex cumque excepturi deleniti temporibus, error eaque accusantium quam voluptates dolor? Sit laudantium porro, similique eligendi harum necessitatibus. Expedita suscipit maxime ipsa!</p>
+                                </div>
+                                <a href="" class="profile__link">View Profile</a>
+
+                            </div>
+                        </aside>
+                    </div>
                 </div>
-                <a href="#" class="silder__arrow silder__arrow--left"></a>
-                <a href="#" class="silder__arrow silder__arrow--right"></a>
+                <a href="#" class="slider__arrow slider__arrow--left">
+                    <svg class="inline-svg-icon" width="50px" height="50px">                    
+                        <use xlink:href="#arrow"></use>
+                    </svg>                    
+                </a>
+                <a href="#" class="slider__arrow slider__arrow--right">
+                    <svg class="inline-svg-icon" width="50px" height="50px">                    
+                        <use xlink:href="#arrow"></use>
+                    </svg> 
+                </a>
                 <ul class="slider__dots">
                     <li>
                         <a href="#" class="slider__dot"></a>
                     </li>
                     <li>
-                        <a href="#" class="slider__dot"></a>
+                        <a href="#" class="slider__dot slider__dot--active"></a>
                     </li>
                     <li>
                         <a href="#" class="slider__dot"></a>
@@ -36,6 +84,17 @@
             </div>
         </main>
 
+
+        <svg style="display: none;">
+            <symbol id="arrow" viewBox="0 0 451.846 451.847">
+                <g>
+                    <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744 L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284 c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"/>
+                </g>
+            </symbol>
+        </svg>
+
+
     </div>
+    <script src="https://kit.fontawesome.com/20ed8529b5.js" crossorigin="anonymous"></script>
 </body>
 </html>

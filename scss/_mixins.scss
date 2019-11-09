@@ -5,3 +5,23 @@
     font-weight: $weight;
     line-height: $line;
 }
+
+  @mixin tr ($all: all, $time: .4s, $who: ease) {
+    transition: $all $time $who;
+  }
+
+@mixin hover-active {
+    @include tr();
+    &:hover,
+    &:focus, 
+    &:active {   
+        @content;
+    }  
+  }
+
+  @mixin posCenter {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }

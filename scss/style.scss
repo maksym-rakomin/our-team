@@ -1,6 +1,7 @@
 @import 'variables';
 @import 'normalize';
 @import 'mixins';
+@import 'slider';
 
 
 * {
@@ -22,7 +23,7 @@ a {
 
 .container {
     margin: 0 auto;
-    min-width: 1140px;
+    max-width: 1140px;
     width: 95%;
 }
 
@@ -31,6 +32,7 @@ a {
     padding: 50px;
     text-transform: uppercase;
     position: relative;
+    margin-bottom: 45px;
 
     &::before,
     &::after {
@@ -62,5 +64,131 @@ a {
     }
     &__subtitle{
         @include text ($text-color, $text-font, 1.8rem, 500, 1.1)
+    }
+}
+
+.profile {
+    min-height: 500px;
+    display: flex;
+    @media screen and (max-width:1024px) {
+        flex-direction: column;
+    }
+    &__side {
+        width: 50%;
+        padding: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        &:first-child {
+            border-right: 1px solid $brand-color;
+            @media screen and (max-width:1024px) {
+                border: none;
+            }
+        }
+        @media screen and (max-width:1024px) {
+            padding: 40px;
+            width: 100%;
+        }
+    }
+
+    &__img {
+        border: 1px solid $brand-color;
+        position: relative;
+        z-index: 1;
+        width: 100%;
+    }
+    &__imgwrap {
+        border: 1px solid $brand-color;
+        font-size: 0;
+        padding: 10px;
+        position: relative;
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;//!!!!!!!!!!!!
+            display: inline-block;
+            width: 102%;
+            height: 60%;
+            background-color: #fff;
+            @include posCenter;
+            z-index: 0;
+        }
+        &::after {
+            width: 60%;
+            height: 102%;
+        }
+        @media screen and (max-width:1024px) {
+            max-width: 180px;
+        }
+    }
+
+
+    &__name {
+        @include text($text-color, $title-font, 3.6rem, 900, 1.1);
+        margin: .5rem 0;
+        &:after {
+            content: '';
+            display: block;
+            width: 30%;
+            margin: 0 auto;
+            border-bottom: 1px solid $brand-color;
+            margin: 1em auto .5em;
+        }
+    }
+    &__office {
+        @include text($text-color, $title-font, 2.4rem, 400, 1.1);
+        margin: .5rem 0;
+    }
+
+    &__link {
+        display: inline-block;
+        color: $text-color;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 1.4rem;
+        border: 1px solid $brand-color;
+        padding: .5rem .5rem;
+        @include text($text-color, $gray, 1.4rem, 700, 1.1);
+        @include hover-active {
+            background-color: $brand-color;
+            color: #fff;
+        }
+    }
+
+    &__text {
+        padding-bottom: 2em;
+        padding-top: 2em;
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 50px;
+            height: 4px;
+            background-image: linear-gradient(to right, $brand-color 0%, $brand-color 20%, transparent 20%, transparent 30%, $brand-color 30%, $brand-color 70%, transparent 70%, transparent 80%, $brand-color 80%, $brand-color 100%);
+        }
+    }
+
+    .social {
+        padding: 0;
+        &__item{
+            display: inline-block;
+        }
+        &__link {
+            color: $gray;
+            font-size: 1.2rem;
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 2px solid $gray;
+            padding: 3px;
+            opacity: .6;
+            text-align: center;
+            line-height: 26px;
+            @include hover-active {
+                opacity: 1;
+            }
+        }
     }
 }
