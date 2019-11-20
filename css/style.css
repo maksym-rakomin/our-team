@@ -535,14 +535,13 @@ a {
     margin: .5rem 0; }
   .profile__link {
     display: inline-block;
-    color: #333;
     text-transform: uppercase;
     text-decoration: none;
     font-size: 1.4rem;
     border: 1px solid #ffcc00;
     padding: .5rem .5rem;
     color: #333;
-    font-family: #898f8f;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
     line-height: 1.1;
